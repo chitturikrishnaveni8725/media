@@ -1,5 +1,5 @@
 import streamlit as st  
-# from db import conn,cursor
+from db import conn,cursor
 # import cloudinary
 # import cloudinary.uploader
 
@@ -12,6 +12,9 @@ import streamlit as st
 
 
 st.title("Media Platform")
+cursor.execute("show tables")
+a=cursor.fetchone()
+st.write(a)
 
 login,signup=st.tabs(
                 ["Login","SignUp"]  
