@@ -43,8 +43,13 @@ import streamlit as st
 
 st.title("Media Platform")
 
-cursor.execute("SHOW TABLES")
+if cursor is not None:
 
-tables = cursor.fetchall()
+    cursor.execute("SHOW TABLES")
 
-st.write(tables)
+    tables = cursor.fetchall()
+
+    st.write(tables)
+
+else:
+    st.error("Database not connected")
