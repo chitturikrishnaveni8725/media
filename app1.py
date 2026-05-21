@@ -1,12 +1,12 @@
 import streamlit as st  
-# from db import conn,cursor
+from db import conn,cursor
 
 
 
-# st.title("Media Platform")
-# cursor.execute("show tables")
-# a=cursor.fetchone()
-# st.write(a)
+st.title("Media Platform")
+cursor.execute("show tables")
+a=cursor.fetchone()
+st.write(a)
 
 login,signup=st.tabs(
                 ["Login","SignUp"]  
@@ -35,6 +35,3 @@ with signup:
         btn=st.form_submit_button("SignUp")
 
 
-# cursor.execute("show tables")
-# a=cursor.fetchone()
-# st.write(a)
