@@ -35,6 +35,6 @@ with signup:
         btn=st.form_submit_button("SignUp")
 
 
-cursor.execute("show tables")
-a=cursor.fetchone()
-st.write(a)
+# cursor.execute("show tables")
+# a=cursor.fetchone()
+# st.write(a)
