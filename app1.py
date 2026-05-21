@@ -7,10 +7,7 @@ import streamlit as st
 st.title("My App Running Successfully")
 
 
-st.title("Media Platform")
-cursor.execute("show tables")
-a=cursor.fetchone()
-st.write(a)
+
 
 login,signup=st.tabs(
                 ["Login","SignUp"]  
