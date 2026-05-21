@@ -1,8 +1,6 @@
 import streamlit as st
 import mysql.connector
 conn=mysql.connector.connect(
-    
-    
     host=st.secrets["MYSQL_HOST"],
     user=st.secrets["MYSQL_USER"],
     database=st.secrets["MYSQL_DB"],
@@ -13,11 +11,10 @@ conn=mysql.connector.connect(
 
 
 cursor=conn.cursor(dictionary=True)
-if conn.is_connected():
-    st.success("Database Connected Successfully")
+
     
 cursor.execute("""
-               create table if not exists  users(
+               create table if not exists  users2(
                    id int primary key auto_increment,
                    name varchar(50) not null,
                    email varchar(50) unique,
@@ -41,9 +38,4 @@ cursor.execute("""
                
                """)
 conn.commit()
-cursor.execute("SHOW TABLES") 
-print(cursor.fetchall()) 
-cursor.execute("DESC users")   # here desc is used to show the structure of  table
-print(cursor.fetchall())
-
 print("table created successfully")
