@@ -34,5 +34,7 @@ with signup:
         Email=st.text_input("Email")
         password=st.text_input("Password",type="password")
         btn=st.form_submit_button("SignUp")
+        
+st.write("databse connected successfully")
 
 
